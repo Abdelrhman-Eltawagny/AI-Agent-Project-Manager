@@ -1,0 +1,15 @@
+{
+  "stage": "final",
+  "passed": true,
+  "error_count": 0,
+  "warning_count": 0,
+  "issues": [],
+  "checked_revision": 19,
+  "semantic_verdict": "concerns",
+  "semantic_notes": [
+    "Sprint 1 goal does not align with the project scope",
+    "Sprint 2 goal is overly broad and lacks specific tasks",
+    "Sprint 3 goal is not aligned with the project scope",
+    "Sprint 4 goal is not aligned with the project scope"
+  ]
+}

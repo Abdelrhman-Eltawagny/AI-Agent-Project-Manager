@@ -1,0 +1,86 @@
+[
+  {
+    "id": "RISK-001",
+    "title": "Authentication delays",
+    "description": "Authentication blocks all other features.",
+    "likelihood": "high",
+    "impact": "high",
+    "mitigation": "Implement multi-factor authentication and regular security audits.",
+    "epic_ids": [
+      "EPIC-001",
+      "EPIC-002",
+      "EPIC-003",
+      "EPIC-004"
+    ]
+  },
+  {
+    "id": "RISK-002",
+    "title": "Database schema changes after week 2",
+    "description": "Could invalidate API and UI work.",
+    "likelihood": "medium",
+    "impact": "high",
+    "mitigation": "Schedule database changes during a maintenance window.",
+    "epic_ids": [
+      "EPIC-001",
+      "EPIC-002",
+      "EPIC-003",
+      "EPIC-004"
+    ]
+  },
+  {
+    "id": "RISK-003",
+    "title": "Frontend/backend integration delays",
+    "description": "If API contracts are not agreed early.",
+    "likelihood": "high",
+    "impact": "high",
+    "mitigation": "Agree API contracts early and conduct thorough testing.",
+    "epic_ids": [
+      "EPIC-001",
+      "EPIC-002",
+      "EPIC-003",
+      "EPIC-004"
+    ]
+  },
+  {
+    "id": "RISK-004",
+    "title": "QA bottleneck",
+    "description": "A single QA engineer must test everything in the last two weeks.",
+    "likelihood": "high",
+    "impact": "high",
+    "mitigation": "Increase QA team size or extend testing phases.",
+    "epic_ids": [
+      "EPIC-001",
+      "EPIC-002",
+      "EPIC-003",
+      "EPIC-004"
+    ]
+  },
+  {
+    "id": "RISK-005",
+    "title": "Deployment issues",
+    "description": "Discovered late because production-like environments are not used early.",
+    "likelihood": "medium",
+    "impact": "high",
+    "mitigation": "Use production-like environments early and conduct thorough testing.",
+    "epic_ids": [
+      "EPIC-001",
+      "EPIC-002",
+      "EPIC-003",
+      "EPIC-004"
+    ]
+  },
+  {
+    "id": "RISK-006",
+    "title": "Scope creep",
+    "description": "Stakeholders asking for extra features during the month.",
+    "likelihood": "high",
+    "impact": "high",
+    "mitigation": "Set clear scope and communicate it to stakeholders.",
+    "epic_ids": [
+      "EPIC-001",
+      "EPIC-002",
+      "EPIC-003",
+      "EPIC-004"
+    ]
+  }
+]

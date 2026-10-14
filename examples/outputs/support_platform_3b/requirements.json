@@ -1,0 +1,163 @@
+[
+  {
+    "id": "REQ-001",
+    "kind": "functional",
+    "title": "Authentication",
+    "description": "users sign in with email and password; sessions expire; failed logins are limited.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-002",
+    "kind": "functional",
+    "title": "User roles",
+    "description": "roles agent, lead and admin control what a user may do.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-003",
+    "kind": "functional",
+    "title": "Customer management",
+    "description": "agents create, edit and deactivate customer records (name, email, phone, company).",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-004",
+    "kind": "functional",
+    "title": "Customer profile",
+    "description": "a profile page shows customer data and the full history of the customer's tickets.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-005",
+    "kind": "functional",
+    "title": "Ticket creation",
+    "description": "agents create a ticket for a customer with title, description, category and priority.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-006",
+    "kind": "functional",
+    "title": "Ticket assignment",
+    "description": "leads and agents assign or reassign a ticket to a support agent.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-007",
+    "kind": "functional",
+    "title": "Ticket status",
+    "description": "tickets move through open, in progress, waiting for customer, resolved and closed.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-008",
+    "kind": "functional",
+    "title": "Ticket priority",
+    "description": "each ticket has a priority (low, medium, high, urgent) that can be changed.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-009",
+    "kind": "functional",
+    "title": "Comments",
+    "description": "agents add internal comments to a ticket; comments show author and time.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-010",
+    "kind": "functional",
+    "title": "Search",
+    "description": "agents search tickets and customers by keyword, ticket number or customer name.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-011",
+    "kind": "functional",
+    "title": "Filtering",
+    "description": "the ticket list can be filtered by status, priority, assignee and creation date.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-012",
+    "kind": "functional",
+    "title": "Dashboard",
+    "description": "a dashboard shows open tickets, tickets by status, tickets by priority and tickets per agent.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-013",
+    "kind": "functional",
+    "title": "Basic reporting",
+    "description": "leads export the filtered ticket list as CSV.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-014",
+    "kind": "functional",
+    "title": "Agent management",
+    "description": "leads and admins create, deactivate and edit support agent accounts.",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-015",
+    "kind": "non_functional",
+    "title": "Secure authentication",
+    "description": "passwords hashed with a modern algorithm, tokens with expiry",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-016",
+    "kind": "non_functional",
+    "title": "Basic authorization",
+    "description": "every API endpoint checks the caller's role",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-017",
+    "kind": "non_functional",
+    "title": "REST API",
+    "description": "all functionality is exposed through a documented REST API returning JSON",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-018",
+    "kind": "non_functional",
+    "title": "Responsive web interface",
+    "description": "usable on desktop and tablet screen sizes",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-019",
+    "kind": "non_functional",
+    "title": "PostgreSQL database",
+    "description": "versioned schema migrations",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-020",
+    "kind": "non_functional",
+    "title": "Logging",
+    "description": "structured application logs for requests and errors",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-021",
+    "kind": "non_functional",
+    "title": "Basic error handling",
+    "description": "consistent error responses and friendly messages in the UI",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-022",
+    "kind": "non_functional",
+    "title": "Automated tests",
+    "description": "unit and API tests for core flows, plus a small end-to-end smoke suite",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-023",
+    "kind": "non_functional",
+    "title": "Dockerized deployment",
+    "description": "the whole stack starts with Docker Compose",
+    "priority": "high"
+  }
+]

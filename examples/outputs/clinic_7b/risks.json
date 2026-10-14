@@ -1,0 +1,58 @@
+[
+  {
+    "id": "RISK-001",
+    "title": "Authentication delays",
+    "description": "Delays in authentication design impact all features",
+    "likelihood": "high",
+    "impact": "high",
+    "mitigation": "Prioritize auth design",
+    "epic_ids": [
+      "EPIC-001"
+    ]
+  },
+  {
+    "id": "RISK-002",
+    "title": "Booking conflict bugs",
+    "description": "Complex logic may introduce bugs",
+    "likelihood": "medium",
+    "impact": "high",
+    "mitigation": "Thorough testing",
+    "epic_ids": [
+      "EPIC-004"
+    ]
+  },
+  {
+    "id": "RISK-003",
+    "title": "Schema changes",
+    "description": "Post-week 2 schema changes invalidate work",
+    "likelihood": "medium",
+    "impact": "high",
+    "mitigation": "Lock schema early",
+    "epic_ids": [
+      "EPIC-006"
+    ]
+  },
+  {
+    "id": "RISK-004",
+    "title": "Integration delays",
+    "description": "API contract agreement may delay integration",
+    "likelihood": "medium",
+    "impact": "medium",
+    "mitigation": "Early API contract",
+    "epic_ids": [
+      "EPIC-004",
+      "EPIC-006"
+    ]
+  },
+  {
+    "id": "RISK-005",
+    "title": "QA bottleneck",
+    "description": "Single QA engineer in last two weeks",
+    "likelihood": "high",
+    "impact": "medium",
+    "mitigation": "Parallel QA tasks",
+    "epic_ids": [
+      "EPIC-007"
+    ]
+  }
+]

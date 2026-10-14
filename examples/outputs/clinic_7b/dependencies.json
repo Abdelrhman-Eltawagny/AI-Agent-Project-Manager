@@ -1,0 +1,272 @@
+[
+  {
+    "task_id": "TASK-003",
+    "depends_on": "TASK-002",
+    "type": "blocks",
+    "reason": "sign-in API required"
+  },
+  {
+    "task_id": "TASK-004",
+    "depends_on": "TASK-002",
+    "type": "blocks",
+    "reason": "login limit depends on sign-in"
+  },
+  {
+    "task_id": "TASK-005",
+    "depends_on": "TASK-002",
+    "type": "blocks",
+    "reason": "secure after sign-in"
+  },
+  {
+    "task_id": "TASK-006",
+    "depends_on": "TASK-002",
+    "type": "blocks",
+    "reason": "auth required for roles"
+  },
+  {
+    "task_id": "TASK-007",
+    "depends_on": "TASK-002",
+    "type": "blocks",
+    "reason": "test after sign-in"
+  },
+  {
+    "task_id": "TASK-008",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "schema for patients"
+  },
+  {
+    "task_id": "TASK-009",
+    "depends_on": "TASK-008",
+    "type": "blocks",
+    "reason": "model after schema"
+  },
+  {
+    "task_id": "TASK-010",
+    "depends_on": "TASK-009",
+    "type": "blocks",
+    "reason": "creation after model"
+  },
+  {
+    "task_id": "TASK-011",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "role-based UI"
+  },
+  {
+    "task_id": "TASK-012",
+    "depends_on": "TASK-009",
+    "type": "blocks",
+    "reason": "edit functionality after model"
+  },
+  {
+    "task_id": "TASK-013",
+    "depends_on": "TASK-012",
+    "type": "blocks",
+    "reason": "deactivation after edit"
+  },
+  {
+    "task_id": "TASK-014",
+    "depends_on": "TASK-009",
+    "type": "blocks",
+    "reason": "display after model"
+  },
+  {
+    "task_id": "TASK-015",
+    "depends_on": "TASK-014",
+    "type": "blocks",
+    "reason": "testing after display"
+  },
+  {
+    "task_id": "TASK-016",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "schema for doctors"
+  },
+  {
+    "task_id": "TASK-017",
+    "depends_on": "TASK-016",
+    "type": "blocks",
+    "reason": "doctor creation after schema"
+  },
+  {
+    "task_id": "TASK-018",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "doctor UI after roles"
+  },
+  {
+    "task_id": "TASK-019",
+    "depends_on": "TASK-018",
+    "type": "blocks",
+    "reason": "UI before functionality"
+  },
+  {
+    "task_id": "TASK-020",
+    "depends_on": "TASK-017",
+    "type": "blocks",
+    "reason": "testing after creation"
+  },
+  {
+    "task_id": "TASK-021",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "schema for appointments"
+  },
+  {
+    "task_id": "TASK-022",
+    "depends_on": "TASK-021",
+    "type": "blocks",
+    "reason": "booking after schema"
+  },
+  {
+    "task_id": "TASK-023",
+    "depends_on": "TASK-022",
+    "type": "blocks",
+    "reason": "conflict detection after booking"
+  },
+  {
+    "task_id": "TASK-024",
+    "depends_on": "TASK-022",
+    "type": "blocks",
+    "reason": "statuses after booking"
+  },
+  {
+    "task_id": "TASK-025",
+    "depends_on": "TASK-022",
+    "type": "blocks",
+    "reason": "rescheduling after booking"
+  },
+  {
+    "task_id": "TASK-026",
+    "depends_on": "TASK-022",
+    "type": "blocks",
+    "reason": "notes after booking"
+  },
+  {
+    "task_id": "TASK-027",
+    "depends_on": "TASK-021",
+    "type": "blocks",
+    "reason": "search after schema"
+  },
+  {
+    "task_id": "TASK-028",
+    "depends_on": "TASK-027",
+    "type": "blocks",
+    "reason": "functionality after search"
+  },
+  {
+    "task_id": "TASK-029",
+    "depends_on": "TASK-028",
+    "type": "blocks",
+    "reason": "filter UI after search"
+  },
+  {
+    "task_id": "TASK-030",
+    "depends_on": "TASK-028",
+    "type": "blocks",
+    "reason": "integration after search"
+  },
+  {
+    "task_id": "TASK-031",
+    "depends_on": "TASK-028",
+    "type": "blocks",
+    "reason": "testing after search"
+  },
+  {
+    "task_id": "TASK-032",
+    "depends_on": "TASK-033",
+    "type": "blocks",
+    "reason": "database setup after schema"
+  },
+  {
+    "task_id": "TASK-034",
+    "depends_on": "TASK-032",
+    "type": "blocks",
+    "reason": "endpoints after setup"
+  },
+  {
+    "task_id": "TASK-035",
+    "depends_on": "TASK-034",
+    "type": "blocks",
+    "reason": "integration after endpoints"
+  },
+  {
+    "task_id": "TASK-036",
+    "depends_on": "TASK-034",
+    "type": "blocks",
+    "reason": "testing after endpoints"
+  },
+  {
+    "task_id": "TASK-037",
+    "depends_on": "TASK-036",
+    "type": "blocks",
+    "reason": "project setup after testing"
+  },
+  {
+    "task_id": "TASK-038",
+    "depends_on": "TASK-037",
+    "type": "blocks",
+    "reason": "responsive design after project"
+  },
+  {
+    "task_id": "TASK-039",
+    "depends_on": "TASK-037",
+    "type": "blocks",
+    "reason": "Docker Compose after project"
+  },
+  {
+    "task_id": "TASK-040",
+    "depends_on": "TASK-039",
+    "type": "blocks",
+    "reason": "testing after Docker"
+  },
+  {
+    "task_id": "TASK-041",
+    "depends_on": "TASK-034",
+    "type": "blocks",
+    "reason": "logging after endpoints"
+  },
+  {
+    "task_id": "TASK-042",
+    "depends_on": "TASK-034",
+    "type": "blocks",
+    "reason": "tests after endpoints"
+  },
+  {
+    "task_id": "TASK-043",
+    "depends_on": "TASK-042",
+    "type": "blocks",
+    "reason": "cases after tests"
+  },
+  {
+    "task_id": "TASK-044",
+    "depends_on": "TASK-034",
+    "type": "blocks",
+    "reason": "Dockerize after endpoints"
+  },
+  {
+    "task_id": "TASK-045",
+    "depends_on": "TASK-035",
+    "type": "blocks",
+    "reason": "testing after integration"
+  },
+  {
+    "task_id": "TASK-046",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "flow design after roles"
+  },
+  {
+    "task_id": "TASK-047",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "patient UI after roles"
+  },
+  {
+    "task_id": "TASK-048",
+    "depends_on": "TASK-006",
+    "type": "blocks",
+    "reason": "doctor UI after roles"
+  }
+]

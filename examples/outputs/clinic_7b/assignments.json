@@ -1,0 +1,290 @@
+[
+  {
+    "task_id": "TASK-001",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-002",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-033",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-003",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-004",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-005",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-006",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-032",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-001",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-046",
+    "member_id": "TEAM-006",
+    "sprint_id": "SPRINT-001",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-008",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-016",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-018",
+    "member_id": "TEAM-004",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-021",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-009",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-017",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-019",
+    "member_id": "TEAM-005",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-011",
+    "member_id": "TEAM-004",
+    "sprint_id": "SPRINT-002",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-034",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-002",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-022",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-002",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-036",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-002",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-047",
+    "member_id": "TEAM-006",
+    "sprint_id": "SPRINT-002",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-048",
+    "member_id": "TEAM-006",
+    "sprint_id": "SPRINT-002",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-027",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-035",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-010",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-012",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-025",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-028",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-037",
+    "member_id": "TEAM-005",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-014",
+    "member_id": "TEAM-004",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-023",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-024",
+    "member_id": "TEAM-005",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-026",
+    "member_id": "TEAM-004",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-013",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-003",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-007",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-003",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-039",
+    "member_id": "TEAM-008",
+    "sprint_id": "SPRINT-003",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-020",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-003",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-040",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-003",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-042",
+    "member_id": "TEAM-003",
+    "sprint_id": "SPRINT-004",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-045",
+    "member_id": "TEAM-005",
+    "sprint_id": "SPRINT-004",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-029",
+    "member_id": "TEAM-004",
+    "sprint_id": "SPRINT-004",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-030",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-004",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-038",
+    "member_id": "TEAM-005",
+    "sprint_id": "SPRINT-004",
+    "reason": "agent choice (role + skills + capacity)"
+  },
+  {
+    "task_id": "TASK-041",
+    "member_id": "TEAM-002",
+    "sprint_id": "SPRINT-004",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-015",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-004",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-044",
+    "member_id": "TEAM-008",
+    "sprint_id": "SPRINT-004",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-031",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-004",
+    "reason": "auto: least-loaded eligible member"
+  },
+  {
+    "task_id": "TASK-043",
+    "member_id": "TEAM-007",
+    "sprint_id": "SPRINT-004",
+    "reason": "auto: least-loaded eligible member"
+  }
+]

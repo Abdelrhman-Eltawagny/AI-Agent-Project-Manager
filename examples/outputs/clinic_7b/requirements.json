@@ -1,0 +1,247 @@
+[
+  {
+    "id": "REQ-001",
+    "kind": "functional",
+    "title": "User sign-in",
+    "description": "Users sign in with email and password",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-002",
+    "kind": "functional",
+    "title": "Session expiration",
+    "description": "Sessions expire after inactivity",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-003",
+    "kind": "functional",
+    "title": "Failed login limit",
+    "description": "Limit failed login attempts",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-004",
+    "kind": "functional",
+    "title": "User roles",
+    "description": "Define roles for receptionist, doctor, manager",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-005",
+    "kind": "functional",
+    "title": "Patient creation",
+    "description": "Receptionists create patient records",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-006",
+    "kind": "functional",
+    "title": "Patient editing",
+    "description": "Receptionists edit patient records",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-007",
+    "kind": "functional",
+    "title": "Patient deactivation",
+    "description": "Receptionists deactivate patient records",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-008",
+    "kind": "functional",
+    "title": "Patient data display",
+    "description": "Show patient personal data and history",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-009",
+    "kind": "functional",
+    "title": "Doctor creation",
+    "description": "Managers create doctors",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-010",
+    "kind": "functional",
+    "title": "Doctor specialization",
+    "description": "Set doctor specialty and hours",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-011",
+    "kind": "functional",
+    "title": "Appointment booking",
+    "description": "Book appointments for patients",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-012",
+    "kind": "functional",
+    "title": "Conflict detection",
+    "description": "Reject overlapping appointments",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-013",
+    "kind": "functional",
+    "title": "Appointment status",
+    "description": "Track appointment status changes",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-014",
+    "kind": "functional",
+    "title": "Rescheduling",
+    "description": "Move or cancel appointments",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-015",
+    "kind": "functional",
+    "title": "Visit notes",
+    "description": "Add notes to completed appointments",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-016",
+    "kind": "functional",
+    "title": "Search functionality",
+    "description": "Search patients by name or phone",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-017",
+    "kind": "functional",
+    "title": "Appointment filtering",
+    "description": "Filter appointments by date, doctor, status",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-018",
+    "kind": "functional",
+    "title": "Doctor schedule view",
+    "description": "Show doctor's daily and weekly schedule",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-019",
+    "kind": "functional",
+    "title": "Dashboard",
+    "description": "Display today's appointments and status",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-020",
+    "kind": "functional",
+    "title": "Basic reporting",
+    "description": "Export appointment list as CSV",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-021",
+    "kind": "functional",
+    "title": "Staff management",
+    "description": "Create, edit and deactivate staff accounts",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-022",
+    "kind": "non_functional",
+    "title": "Secure authentication",
+    "description": "Passwords hashed, tokens with expiry",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-023",
+    "kind": "non_functional",
+    "title": "Authorization",
+    "description": "API endpoint checks caller's role",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-024",
+    "kind": "non_functional",
+    "title": "REST API",
+    "description": "All functionality exposed through REST API",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-025",
+    "kind": "non_functional",
+    "title": "Responsive web interface",
+    "description": "Usable on desktop and tablet",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-026",
+    "kind": "non_functional",
+    "title": "PostgreSQL database",
+    "description": "Versioned schema migrations",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-027",
+    "kind": "non_functional",
+    "title": "Logging",
+    "description": "Structured application logs",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-028",
+    "kind": "non_functional",
+    "title": "Error handling",
+    "description": "Consistent error responses, friendly messages",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-029",
+    "kind": "non_functional",
+    "title": "Automated tests",
+    "description": "Unit, API, and end-to-end tests",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-030",
+    "kind": "non_functional",
+    "title": "Dockerized deployment",
+    "description": "Docker Compose for deployment",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-031",
+    "kind": "non_functional",
+    "title": "Privacy",
+    "description": "Patient data visible to matching roles",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-032",
+    "kind": "constraint",
+    "title": "Backend in Python",
+    "description": "Python for backend",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-033",
+    "kind": "constraint",
+    "title": "Web frontend with React",
+    "description": "React for frontend",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-034",
+    "kind": "constraint",
+    "title": "Docker Compose deployment",
+    "description": "Single server with Docker Compose",
+    "priority": "high"
+  },
+  {
+    "id": "REQ-035",
+    "kind": "constraint",
+    "title": "Local time zone",
+    "description": "Uses clinic's local time zone",
+    "priority": "high"
+  }
+]

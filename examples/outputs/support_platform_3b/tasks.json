@@ -1,0 +1,272 @@
+[
+  {
+    "id": "TASK-001",
+    "epic_id": "EPIC-001",
+    "title": "Implement PostgreSQL Database Integration",
+    "type": "backend",
+    "description": "Set up PostgreSQL database for application",
+    "estimated_hours": 6.0,
+    "priority": "high",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-002",
+    "epic_id": "EPIC-001",
+    "title": "Design Logging System",
+    "type": "backend",
+    "description": "Design and implement logging mechanism",
+    "estimated_hours": 4.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-003",
+    "epic_id": "EPIC-001",
+    "title": "Implement Basic Error Handling",
+    "type": "backend",
+    "description": "Add basic error handling for API endpoints",
+    "estimated_hours": 4.0,
+    "priority": "critical",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-004",
+    "epic_id": "EPIC-001",
+    "title": "Create Automated Test Cases",
+    "type": "backend",
+    "description": "Develop and execute automated test cases",
+    "estimated_hours": 6.0,
+    "priority": "critical",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-005",
+    "epic_id": "EPIC-001",
+    "title": "Dockerize Application Deployment",
+    "type": "devops",
+    "description": "Containerize application for deployment",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-006",
+    "epic_id": "EPIC-002",
+    "title": "Implement User Authentication API Endpoints",
+    "type": "backend",
+    "description": "Create endpoints for user registration and login",
+    "estimated_hours": 6.0,
+    "priority": "critical",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-007",
+    "epic_id": "EPIC-002",
+    "title": "Implement Role-Based Access Control",
+    "type": "backend",
+    "description": "Add logic for user roles and permissions",
+    "estimated_hours": 6.0,
+    "priority": "critical",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-008",
+    "epic_id": "EPIC-002",
+    "title": "Implement User Role Management",
+    "type": "backend",
+    "description": "Create endpoints for managing user roles",
+    "estimated_hours": 4.0,
+    "priority": "critical",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-009",
+    "epic_id": "EPIC-002",
+    "title": "Implement User Authentication Testing",
+    "type": "qa",
+    "description": "Write tests for user authentication endpoints",
+    "estimated_hours": 4.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-010",
+    "epic_id": "EPIC-003",
+    "title": "Implement Customer Profile CRUD Operations",
+    "type": "backend",
+    "description": "Create, read, update, delete operations for customer profiles",
+    "estimated_hours": 8.0,
+    "priority": "critical",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-011",
+    "epic_id": "EPIC-003",
+    "title": "Create Ticket Creation Form and Backend API",
+    "type": "backend",
+    "description": "Design and implement form for creating new tickets and API",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-012",
+    "epic_id": "EPIC-003",
+    "title": "Implement Ticket Assignment Logic",
+    "type": "backend",
+    "description": "Logic to assign tickets to agents based on priority",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-013",
+    "epic_id": "EPIC-003",
+    "title": "Design and Implement Basic Reporting API",
+    "type": "backend",
+    "description": "API to generate basic reports on customer and ticket data",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-014",
+    "epic_id": "EPIC-003",
+    "title": "Create Frontend Ticket Creation Form",
+    "type": "frontend",
+    "description": "Design and implement form for creating new tickets",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-015",
+    "epic_id": "EPIC-003",
+    "title": "Design and Implement Customer Profile Page",
+    "type": "frontend",
+    "description": "Design and implement page for viewing and editing customer profiles",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-016",
+    "epic_id": "EPIC-003",
+    "title": "Implement Basic Filtering and Searching on Tickets",
+    "type": "frontend",
+    "description": "Add basic filtering and searching functionality on ticket list",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-017",
+    "epic_id": "EPIC-003",
+    "title": "Design and Implement Dashboard for Agents",
+    "type": "frontend",
+    "description": "Design and implement dashboard for agents to view their tickets",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-018",
+    "epic_id": "EPIC-004",
+    "title": "Implement Backend Authentication",
+    "type": "backend",
+    "description": "Secure user authentication system",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-019",
+    "epic_id": "EPIC-004",
+    "title": "Design and Implement Frontend User Interface",
+    "type": "frontend",
+    "description": "Create user-friendly login and dashboard",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-020",
+    "epic_id": "EPIC-005",
+    "title": "Implement Basic Authorization Backend",
+    "type": "backend",
+    "description": "Implement basic authorization for the REST API",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-021",
+    "epic_id": "EPIC-005",
+    "title": "Implement REST API Backend",
+    "type": "backend",
+    "description": "Implement REST API endpoints for the application",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-022",
+    "epic_id": "EPIC-005",
+    "title": "Implement Logging and Error Handling Backend",
+    "type": "backend",
+    "description": "Implement logging and error handling for the application",
+    "estimated_hours": 6.0,
+    "priority": "high",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-023",
+    "epic_id": "EPIC-001",
+    "title": "Design Foundation Architecture",
+    "type": "design",
+    "description": "Design the overall architecture of the system to ensure scalability and maintainability.",
+    "estimated_hours": 6.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-024",
+    "epic_id": "EPIC-002",
+    "title": "Backend API Design",
+    "type": "backend",
+    "description": "Design and document the backend API endpoints and their interactions.",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-025",
+    "epic_id": "EPIC-003",
+    "title": "Customer Management Database Schema",
+    "type": "database",
+    "description": "Design the database schema for storing customer information.",
+    "estimated_hours": 4.0,
+    "priority": "high",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-026",
+    "epic_id": "EPIC-004",
+    "title": "Frontend User Interface Design",
+    "type": "frontend",
+    "description": "Design the user interface for the frontend application.",
+    "estimated_hours": 8.0,
+    "priority": "low",
+    "status": "planned"
+  },
+  {
+    "id": "TASK-027",
+    "epic_id": "EPIC-005",
+    "title": "Non-functional Requirements Documentation",
+    "type": "documentation",
+    "description": "Document the non-functional requirements for the system.",
+    "estimated_hours": 4.0,
+    "priority": "high",
+    "status": "planned"
+  }
+]

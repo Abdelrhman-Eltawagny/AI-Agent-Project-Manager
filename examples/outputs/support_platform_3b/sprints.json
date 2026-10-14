@@ -1,0 +1,65 @@
+[
+  {
+    "id": "SPRINT-001",
+    "number": 1,
+    "goal": "Set up repository and CI",
+    "task_ids": [
+      "TASK-001",
+      "TASK-003",
+      "TASK-004",
+      "TASK-006",
+      "TASK-007",
+      "TASK-008",
+      "TASK-010",
+      "TASK-022"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 46.0
+  },
+  {
+    "id": "SPRINT-002",
+    "number": 2,
+    "goal": "Customer and ticket core",
+    "task_ids": [
+      "TASK-002",
+      "TASK-009",
+      "TASK-011",
+      "TASK-012",
+      "TASK-013",
+      "TASK-014",
+      "TASK-025",
+      "TASK-027"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 42.0
+  },
+  {
+    "id": "SPRINT-003",
+    "number": 3,
+    "goal": "Comments, search, filtering, dashboard",
+    "task_ids": [
+      "TASK-015",
+      "TASK-016",
+      "TASK-017",
+      "TASK-018",
+      "TASK-019",
+      "TASK-020"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 42.0
+  },
+  {
+    "id": "SPRINT-004",
+    "number": 4,
+    "goal": "QA, bug fixing, deployment hardening, documentation",
+    "task_ids": [
+      "TASK-005",
+      "TASK-021",
+      "TASK-023",
+      "TASK-024",
+      "TASK-026"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 36.0
+  }
+]

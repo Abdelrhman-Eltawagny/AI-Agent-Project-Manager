@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Generated run output (real examples live in examples/outputs)
+outputs/*
+!outputs/.gitkeep
+plan/*
+!plan/.gitkeep
+*.log
+state_checkpoint.json
+draft_project_plan.json
+
+# Archives
+*.zip
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

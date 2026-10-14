@@ -1,0 +1,38 @@
+# Production: Ollama + web app together on one server.
+#   1) cp .env.example .env   (set API_KEY)
+#   2) put the plan in ./plan/final_project_plan.json
+#   3) docker compose -f docker-compose.prod.yml up -d --build
+#   4) docker compose -f docker-compose.prod.yml exec ollama ollama pull qwen2.5:7b   (first time only)
+# Open http://SERVER_IP:8000
+
+services:
+  ollama:
+    image: ollama/ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    # Nvidia GPU server: uncomment
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{driver: nvidia, count: all, capabilities: [gpu]}]
+
+  web:
+    build: .
+    image: ai-project-manager
+    restart: unless-stopped
+    command: ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      PM_OLLAMA_URL: http://ollama:11434
+      PM_MODEL: ${PM_MODEL:-qwen2.5:7b}
+      PLAN_PATH: /app/plan/final_project_plan.json
+      API_KEY: ${API_KEY:?Set API_KEY in .env}
+    volumes:
+      - ./plan:/app/plan:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data:

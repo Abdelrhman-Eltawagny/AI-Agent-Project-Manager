@@ -1,0 +1,39 @@
+{
+  "stage": "final",
+  "passed": true,
+  "error_count": 0,
+  "warning_count": 4,
+  "issues": [
+    {
+      "code": "REQUIREMENT_UNCOVERED",
+      "severity": "warning",
+      "message": "functional requirement 'Doctor schedule view' is not linked to any epic",
+      "entity_id": "REQ-018"
+    },
+    {
+      "code": "REQUIREMENT_UNCOVERED",
+      "severity": "warning",
+      "message": "functional requirement 'Dashboard' is not linked to any epic",
+      "entity_id": "REQ-019"
+    },
+    {
+      "code": "REQUIREMENT_UNCOVERED",
+      "severity": "warning",
+      "message": "functional requirement 'Basic reporting' is not linked to any epic",
+      "entity_id": "REQ-020"
+    },
+    {
+      "code": "REQUIREMENT_UNCOVERED",
+      "severity": "warning",
+      "message": "functional requirement 'Staff management' is not linked to any epic",
+      "entity_id": "REQ-021"
+    }
+  ],
+  "checked_revision": 21,
+  "semantic_verdict": "concerns",
+  "semantic_notes": [
+    "Sprint 1 tasks are well-defined but the goal 'Implement foundations' is too broad and may not cover all necessary aspects.",
+    "Sprint 3 tasks include 'Set up React project (+2 more)', which seems out of place as it was not mentioned in previous sprints and might be better suited for a separate sprint.",
+    "Sprint 4 tasks are mostly testing and setup, which might be better spread across multiple sprints to ensure quality and maintainability."
+  ]
+}

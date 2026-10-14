@@ -1,0 +1,8 @@
+[
+  {
+    "task_id": "TASK-005",
+    "depends_on": "TASK-002",
+    "type": "blocks",
+    "reason": "Design Dockerization before deployment"
+  }
+]

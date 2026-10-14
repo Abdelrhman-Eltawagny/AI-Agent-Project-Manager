@@ -1,0 +1,86 @@
+[
+  {
+    "id": "SPRINT-001",
+    "number": 1,
+    "goal": "Implement foundations",
+    "task_ids": [
+      "TASK-001",
+      "TASK-002",
+      "TASK-003",
+      "TASK-004",
+      "TASK-005",
+      "TASK-006",
+      "TASK-032",
+      "TASK-033",
+      "TASK-046"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 54.0
+  },
+  {
+    "id": "SPRINT-002",
+    "number": 2,
+    "goal": "Develop core features",
+    "task_ids": [
+      "TASK-008",
+      "TASK-009",
+      "TASK-011",
+      "TASK-016",
+      "TASK-017",
+      "TASK-018",
+      "TASK-019",
+      "TASK-021",
+      "TASK-022",
+      "TASK-034",
+      "TASK-036",
+      "TASK-047",
+      "TASK-048"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 88.0
+  },
+  {
+    "id": "SPRINT-003",
+    "number": 3,
+    "goal": "Add status handling and UI",
+    "task_ids": [
+      "TASK-007",
+      "TASK-010",
+      "TASK-012",
+      "TASK-013",
+      "TASK-014",
+      "TASK-020",
+      "TASK-023",
+      "TASK-024",
+      "TASK-025",
+      "TASK-026",
+      "TASK-027",
+      "TASK-028",
+      "TASK-035",
+      "TASK-037",
+      "TASK-039",
+      "TASK-040"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 90.0
+  },
+  {
+    "id": "SPRINT-004",
+    "number": 4,
+    "goal": "QA and deployment",
+    "task_ids": [
+      "TASK-015",
+      "TASK-029",
+      "TASK-030",
+      "TASK-031",
+      "TASK-038",
+      "TASK-041",
+      "TASK-042",
+      "TASK-043",
+      "TASK-044",
+      "TASK-045"
+    ],
+    "capacity_hours": 220.0,
+    "planned_hours": 86.0
+  }
+]

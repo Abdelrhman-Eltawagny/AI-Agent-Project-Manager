@@ -1,0 +1,2088 @@
+{
+  "project": {
+    "name": "Clinic Appointment & Patient Management System",
+    "summary": "A web application to manage doctors' schedules, patient records, and appointment bookings.",
+    "objective": "Replace paper and spreadsheet booking with one central system.",
+    "duration_weeks": 4,
+    "sprint_count": 4,
+    "sprint_length_weeks": 1,
+    "actors": [
+      "Receptionist",
+      "Doctor",
+      "Clinic Manager"
+    ],
+    "mvp_scope": [
+      "Authentication and roles",
+      "Patient management",
+      "Doctor management with working hours",
+      "Appointment booking with conflict detection",
+      "Appointment status handling",
+      "Visit notes",
+      "Search and filtering",
+      "Basic dashboard",
+      "CSV export of appointments",
+      "REST API",
+      "Responsive web interface",
+      "PostgreSQL storage",
+      "Docker deployment"
+    ],
+    "out_of_scope": [
+      "Online payments and insurance claims",
+      "Native mobile application",
+      "Patient self-service portal and online booking by patients",
+      "SMS or WhatsApp reminders and email automation",
+      "Integration with lab or hospital systems",
+      "Advanced analytics or custom report builders"
+    ],
+    "assumptions": [
+      "Double bookings will be prevented",
+      "Each doctor's schedule will be clearly shown",
+      "A searchable patient record with full visit history will be kept",
+      "Manager will have simple numbers on appointments per doctor and per status",
+      "System will be secure, deployable, and responsive"
+    ],
+    "constraints": [
+      "Backend in Python",
+      "Web frontend with React",
+      "Docker Compose deployment",
+      "Local time zone"
+    ],
+    "business_priority": "High",
+    "status": "complete"
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "kind": "functional",
+      "title": "User sign-in",
+      "description": "Users sign in with email and password",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-002",
+      "kind": "functional",
+      "title": "Session expiration",
+      "description": "Sessions expire after inactivity",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-003",
+      "kind": "functional",
+      "title": "Failed login limit",
+      "description": "Limit failed login attempts",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-004",
+      "kind": "functional",
+      "title": "User roles",
+      "description": "Define roles for receptionist, doctor, manager",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-005",
+      "kind": "functional",
+      "title": "Patient creation",
+      "description": "Receptionists create patient records",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-006",
+      "kind": "functional",
+      "title": "Patient editing",
+      "description": "Receptionists edit patient records",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-007",
+      "kind": "functional",
+      "title": "Patient deactivation",
+      "description": "Receptionists deactivate patient records",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-008",
+      "kind": "functional",
+      "title": "Patient data display",
+      "description": "Show patient personal data and history",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-009",
+      "kind": "functional",
+      "title": "Doctor creation",
+      "description": "Managers create doctors",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-010",
+      "kind": "functional",
+      "title": "Doctor specialization",
+      "description": "Set doctor specialty and hours",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-011",
+      "kind": "functional",
+      "title": "Appointment booking",
+      "description": "Book appointments for patients",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-012",
+      "kind": "functional",
+      "title": "Conflict detection",
+      "description": "Reject overlapping appointments",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-013",
+      "kind": "functional",
+      "title": "Appointment status",
+      "description": "Track appointment status changes",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-014",
+      "kind": "functional",
+      "title": "Rescheduling",
+      "description": "Move or cancel appointments",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-015",
+      "kind": "functional",
+      "title": "Visit notes",
+      "description": "Add notes to completed appointments",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-016",
+      "kind": "functional",
+      "title": "Search functionality",
+      "description": "Search patients by name or phone",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-017",
+      "kind": "functional",
+      "title": "Appointment filtering",
+      "description": "Filter appointments by date, doctor, status",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-018",
+      "kind": "functional",
+      "title": "Doctor schedule view",
+      "description": "Show doctor's daily and weekly schedule",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-019",
+      "kind": "functional",
+      "title": "Dashboard",
+      "description": "Display today's appointments and status",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-020",
+      "kind": "functional",
+      "title": "Basic reporting",
+      "description": "Export appointment list as CSV",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-021",
+      "kind": "functional",
+      "title": "Staff management",
+      "description": "Create, edit and deactivate staff accounts",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-022",
+      "kind": "non_functional",
+      "title": "Secure authentication",
+      "description": "Passwords hashed, tokens with expiry",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-023",
+      "kind": "non_functional",
+      "title": "Authorization",
+      "description": "API endpoint checks caller's role",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-024",
+      "kind": "non_functional",
+      "title": "REST API",
+      "description": "All functionality exposed through REST API",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-025",
+      "kind": "non_functional",
+      "title": "Responsive web interface",
+      "description": "Usable on desktop and tablet",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-026",
+      "kind": "non_functional",
+      "title": "PostgreSQL database",
+      "description": "Versioned schema migrations",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-027",
+      "kind": "non_functional",
+      "title": "Logging",
+      "description": "Structured application logs",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-028",
+      "kind": "non_functional",
+      "title": "Error handling",
+      "description": "Consistent error responses, friendly messages",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-029",
+      "kind": "non_functional",
+      "title": "Automated tests",
+      "description": "Unit, API, and end-to-end tests",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-030",
+      "kind": "non_functional",
+      "title": "Dockerized deployment",
+      "description": "Docker Compose for deployment",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-031",
+      "kind": "non_functional",
+      "title": "Privacy",
+      "description": "Patient data visible to matching roles",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-032",
+      "kind": "constraint",
+      "title": "Backend in Python",
+      "description": "Python for backend",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-033",
+      "kind": "constraint",
+      "title": "Web frontend with React",
+      "description": "React for frontend",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-034",
+      "kind": "constraint",
+      "title": "Docker Compose deployment",
+      "description": "Single server with Docker Compose",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-035",
+      "kind": "constraint",
+      "title": "Local time zone",
+      "description": "Uses clinic's local time zone",
+      "priority": "high"
+    }
+  ],
+  "epics": [
+    {
+      "id": "EPIC-001",
+      "name": "User Authentication",
+      "description": "Secure user sign-in and roles",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-001",
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-022",
+        "REQ-023"
+      ]
+    },
+    {
+      "id": "EPIC-002",
+      "name": "Patient Management",
+      "description": "Create, edit, and manage patients",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-005",
+        "REQ-006",
+        "REQ-007",
+        "REQ-008"
+      ]
+    },
+    {
+      "id": "EPIC-003",
+      "name": "Doctor Management",
+      "description": "Create and manage doctors",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-009",
+        "REQ-010"
+      ]
+    },
+    {
+      "id": "EPIC-004",
+      "name": "Appointment Booking",
+      "description": "Book and manage appointments",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-011",
+        "REQ-012",
+        "REQ-013",
+        "REQ-014",
+        "REQ-015"
+      ]
+    },
+    {
+      "id": "EPIC-005",
+      "name": "Search and Filtering",
+      "description": "Search and filter appointments",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-016",
+        "REQ-017"
+      ]
+    },
+    {
+      "id": "EPIC-006",
+      "name": "Backend and Database",
+      "description": "Backend setup and database",
+      "priority": "medium",
+      "requirement_ids": [
+        "REQ-026",
+        "REQ-032"
+      ]
+    },
+    {
+      "id": "EPIC-007",
+      "name": "Frontend and Deployment",
+      "description": "Frontend and deployment setup",
+      "priority": "medium",
+      "requirement_ids": [
+        "REQ-025",
+        "REQ-033",
+        "REQ-034",
+        "REQ-035"
+      ]
+    },
+    {
+      "id": "EPIC-008",
+      "name": "Quality Assurance",
+      "description": "Testing and logging",
+      "priority": "low",
+      "requirement_ids": [
+        "REQ-027",
+        "REQ-029",
+        "REQ-030"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "epic_id": "EPIC-001",
+      "title": "Define authentication models",
+      "type": "backend",
+      "description": "Design user and role models",
+      "estimated_hours": 8.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-002",
+      "epic_id": "EPIC-001",
+      "title": "Implement sign-in API",
+      "type": "backend",
+      "description": "Create sign-in endpoint",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-003",
+      "epic_id": "EPIC-001",
+      "title": "Set session expiration",
+      "type": "backend",
+      "description": "Configure session timeout",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-004",
+      "epic_id": "EPIC-001",
+      "title": "Add failed login limit",
+      "type": "backend",
+      "description": "Implement login attempt counter",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-005",
+      "epic_id": "EPIC-001",
+      "title": "Secure authentication",
+      "type": "backend",
+      "description": "Encrypt user passwords",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-006",
+      "epic_id": "EPIC-001",
+      "title": "Implement role-based authorization",
+      "type": "backend",
+      "description": "Assign roles to users",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-007",
+      "epic_id": "EPIC-001",
+      "title": "Test authentication flows",
+      "type": "qa",
+      "description": "Run integration tests",
+      "estimated_hours": 8.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-008",
+      "epic_id": "EPIC-002",
+      "title": "Define patient schema",
+      "type": "backend",
+      "description": "Design database fields for patient data",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-009",
+      "epic_id": "EPIC-002",
+      "title": "Create patient model",
+      "type": "backend",
+      "description": "Implement patient data model in backend",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-010",
+      "epic_id": "EPIC-002",
+      "title": "Implement patient creation",
+      "type": "backend",
+      "description": "Add API endpoint for patient creation",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-011",
+      "epic_id": "EPIC-002",
+      "title": "Design patient edit form",
+      "type": "frontend",
+      "description": "Create form for editing patient data",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-012",
+      "epic_id": "EPIC-002",
+      "title": "Implement patient edit functionality",
+      "type": "backend",
+      "description": "Add API endpoint for patient editing",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-013",
+      "epic_id": "EPIC-002",
+      "title": "Implement patient deactivation",
+      "type": "backend",
+      "description": "Add API endpoint for patient deactivation",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-014",
+      "epic_id": "EPIC-002",
+      "title": "Display patient data",
+      "type": "frontend",
+      "description": "Show patient data in patient list view",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-015",
+      "epic_id": "EPIC-002",
+      "title": "Write unit tests",
+      "type": "qa",
+      "description": "Test patient CRUD operations",
+      "estimated_hours": 8.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-016",
+      "epic_id": "EPIC-003",
+      "title": "Define doctor schema",
+      "type": "backend",
+      "description": "Create database schema for doctors",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-017",
+      "epic_id": "EPIC-003",
+      "title": "Implement doctor creation",
+      "type": "backend",
+      "description": "Create API for doctor creation",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-018",
+      "epic_id": "EPIC-003",
+      "title": "Design doctor UI",
+      "type": "frontend",
+      "description": "Design doctor creation form",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-019",
+      "epic_id": "EPIC-003",
+      "title": "Develop doctor creation UI",
+      "type": "frontend",
+      "description": "Implement doctor creation form",
+      "estimated_hours": 10.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-020",
+      "epic_id": "EPIC-003",
+      "title": "Write unit tests for doctor creation",
+      "type": "qa",
+      "description": "Write tests for doctor creation API",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-021",
+      "epic_id": "EPIC-004",
+      "title": "Define appointment models",
+      "type": "backend",
+      "description": "Create database schema for appointments",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-022",
+      "epic_id": "EPIC-004",
+      "title": "Implement booking logic",
+      "type": "backend",
+      "description": "Create functions to book appointments",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-023",
+      "epic_id": "EPIC-004",
+      "title": "Add conflict detection",
+      "type": "backend",
+      "description": "Detect and prevent overlapping appointments",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-024",
+      "epic_id": "EPIC-004",
+      "title": "Display appointment statuses",
+      "type": "frontend",
+      "description": "Show appointment status on user interface",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-025",
+      "epic_id": "EPIC-004",
+      "title": "Implement rescheduling",
+      "type": "backend",
+      "description": "Create functions to reschedule appointments",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-026",
+      "epic_id": "EPIC-004",
+      "title": "Add visit notes",
+      "type": "frontend",
+      "description": "Allow users to add notes to appointments",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-027",
+      "epic_id": "EPIC-005",
+      "title": "Define search API endpoints",
+      "type": "backend",
+      "description": "Design and document API for search",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-028",
+      "epic_id": "EPIC-005",
+      "title": "Implement search functionality",
+      "type": "backend",
+      "description": "Develop search logic for appointments",
+      "estimated_hours": 12.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-029",
+      "epic_id": "EPIC-005",
+      "title": "Create appointment filter UI",
+      "type": "frontend",
+      "description": "Design and implement filter options",
+      "estimated_hours": 8.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-030",
+      "epic_id": "EPIC-005",
+      "title": "Integrate filters with backend",
+      "type": "backend",
+      "description": "Connect frontend filters to backend API",
+      "estimated_hours": 6.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-031",
+      "epic_id": "EPIC-005",
+      "title": "Write unit tests for search",
+      "type": "qa",
+      "description": "Test search functionality thoroughly",
+      "estimated_hours": 6.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-032",
+      "epic_id": "EPIC-006",
+      "title": "Set up PostgreSQL database",
+      "type": "database",
+      "description": "Configure and initialize PostgreSQL",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-033",
+      "epic_id": "EPIC-006",
+      "title": "Design database schema",
+      "type": "database",
+      "description": "Define tables and relationships",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-034",
+      "epic_id": "EPIC-006",
+      "title": "Create backend API endpoints",
+      "type": "backend",
+      "description": "Implement CRUD operations",
+      "estimated_hours": 12.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-035",
+      "epic_id": "EPIC-006",
+      "title": "Integrate API with frontend",
+      "type": "backend",
+      "description": "Ensure API works with frontend",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-036",
+      "epic_id": "EPIC-006",
+      "title": "Write unit tests for backend",
+      "type": "qa",
+      "description": "Test backend functionality",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-037",
+      "epic_id": "EPIC-007",
+      "title": "Set up React project",
+      "type": "frontend",
+      "description": "Initialize React app with necessary dependencies",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-038",
+      "epic_id": "EPIC-007",
+      "title": "Implement responsive design",
+      "type": "frontend",
+      "description": "Create responsive layout for web interface",
+      "estimated_hours": 12.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-039",
+      "epic_id": "EPIC-007",
+      "title": "Configure Docker Compose",
+      "type": "devops",
+      "description": "Set up Docker Compose for frontend deployment",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-040",
+      "epic_id": "EPIC-007",
+      "title": "Test frontend responsiveness",
+      "type": "qa",
+      "description": "Run tests to ensure responsiveness across devices",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-041",
+      "epic_id": "EPIC-008",
+      "title": "Set up logging framework",
+      "type": "backend",
+      "description": "Configure logging for all services",
+      "estimated_hours": 8.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-042",
+      "epic_id": "EPIC-008",
+      "title": "Implement automated tests",
+      "type": "backend",
+      "description": "Write unit and integration tests",
+      "estimated_hours": 16.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-043",
+      "epic_id": "EPIC-008",
+      "title": "Create test cases",
+      "type": "qa",
+      "description": "Define test scenarios for backend",
+      "estimated_hours": 4.0,
+      "priority": "medium",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-044",
+      "epic_id": "EPIC-008",
+      "title": "Dockerize backend services",
+      "type": "devops",
+      "description": "Package backend services in Docker containers",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-045",
+      "epic_id": "EPIC-008",
+      "title": "Frontend integration testing",
+      "type": "frontend",
+      "description": "Test frontend interactions with backend",
+      "estimated_hours": 12.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-046",
+      "epic_id": "EPIC-001",
+      "title": "Design User Authentication Flow",
+      "type": "design",
+      "description": "Create wireframes and flow diagrams for the user authentication process.",
+      "estimated_hours": 8.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-047",
+      "epic_id": "EPIC-002",
+      "title": "Design Patient Management Interface",
+      "type": "design",
+      "description": "Design the user interface for managing patient records.",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-048",
+      "epic_id": "EPIC-003",
+      "title": "Design Doctor Scheduling Interface",
+      "type": "design",
+      "description": "Design the user interface for scheduling doctor appointments.",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    }
+  ],
+  "dependencies": [
+    {
+      "task_id": "TASK-003",
+      "depends_on": "TASK-002",
+      "type": "blocks",
+      "reason": "sign-in API required"
+    },
+    {
+      "task_id": "TASK-004",
+      "depends_on": "TASK-002",
+      "type": "blocks",
+      "reason": "login limit depends on sign-in"
+    },
+    {
+      "task_id": "TASK-005",
+      "depends_on": "TASK-002",
+      "type": "blocks",
+      "reason": "secure after sign-in"
+    },
+    {
+      "task_id": "TASK-006",
+      "depends_on": "TASK-002",
+      "type": "blocks",
+      "reason": "auth required for roles"
+    },
+    {
+      "task_id": "TASK-007",
+      "depends_on": "TASK-002",
+      "type": "blocks",
+      "reason": "test after sign-in"
+    },
+    {
+      "task_id": "TASK-008",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "schema for patients"
+    },
+    {
+      "task_id": "TASK-009",
+      "depends_on": "TASK-008",
+      "type": "blocks",
+      "reason": "model after schema"
+    },
+    {
+      "task_id": "TASK-010",
+      "depends_on": "TASK-009",
+      "type": "blocks",
+      "reason": "creation after model"
+    },
+    {
+      "task_id": "TASK-011",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "role-based UI"
+    },
+    {
+      "task_id": "TASK-012",
+      "depends_on": "TASK-009",
+      "type": "blocks",
+      "reason": "edit functionality after model"
+    },
+    {
+      "task_id": "TASK-013",
+      "depends_on": "TASK-012",
+      "type": "blocks",
+      "reason": "deactivation after edit"
+    },
+    {
+      "task_id": "TASK-014",
+      "depends_on": "TASK-009",
+      "type": "blocks",
+      "reason": "display after model"
+    },
+    {
+      "task_id": "TASK-015",
+      "depends_on": "TASK-014",
+      "type": "blocks",
+      "reason": "testing after display"
+    },
+    {
+      "task_id": "TASK-016",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "schema for doctors"
+    },
+    {
+      "task_id": "TASK-017",
+      "depends_on": "TASK-016",
+      "type": "blocks",
+      "reason": "doctor creation after schema"
+    },
+    {
+      "task_id": "TASK-018",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "doctor UI after roles"
+    },
+    {
+      "task_id": "TASK-019",
+      "depends_on": "TASK-018",
+      "type": "blocks",
+      "reason": "UI before functionality"
+    },
+    {
+      "task_id": "TASK-020",
+      "depends_on": "TASK-017",
+      "type": "blocks",
+      "reason": "testing after creation"
+    },
+    {
+      "task_id": "TASK-021",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "schema for appointments"
+    },
+    {
+      "task_id": "TASK-022",
+      "depends_on": "TASK-021",
+      "type": "blocks",
+      "reason": "booking after schema"
+    },
+    {
+      "task_id": "TASK-023",
+      "depends_on": "TASK-022",
+      "type": "blocks",
+      "reason": "conflict detection after booking"
+    },
+    {
+      "task_id": "TASK-024",
+      "depends_on": "TASK-022",
+      "type": "blocks",
+      "reason": "statuses after booking"
+    },
+    {
+      "task_id": "TASK-025",
+      "depends_on": "TASK-022",
+      "type": "blocks",
+      "reason": "rescheduling after booking"
+    },
+    {
+      "task_id": "TASK-026",
+      "depends_on": "TASK-022",
+      "type": "blocks",
+      "reason": "notes after booking"
+    },
+    {
+      "task_id": "TASK-027",
+      "depends_on": "TASK-021",
+      "type": "blocks",
+      "reason": "search after schema"
+    },
+    {
+      "task_id": "TASK-028",
+      "depends_on": "TASK-027",
+      "type": "blocks",
+      "reason": "functionality after search"
+    },
+    {
+      "task_id": "TASK-029",
+      "depends_on": "TASK-028",
+      "type": "blocks",
+      "reason": "filter UI after search"
+    },
+    {
+      "task_id": "TASK-030",
+      "depends_on": "TASK-028",
+      "type": "blocks",
+      "reason": "integration after search"
+    },
+    {
+      "task_id": "TASK-031",
+      "depends_on": "TASK-028",
+      "type": "blocks",
+      "reason": "testing after search"
+    },
+    {
+      "task_id": "TASK-032",
+      "depends_on": "TASK-033",
+      "type": "blocks",
+      "reason": "database setup after schema"
+    },
+    {
+      "task_id": "TASK-034",
+      "depends_on": "TASK-032",
+      "type": "blocks",
+      "reason": "endpoints after setup"
+    },
+    {
+      "task_id": "TASK-035",
+      "depends_on": "TASK-034",
+      "type": "blocks",
+      "reason": "integration after endpoints"
+    },
+    {
+      "task_id": "TASK-036",
+      "depends_on": "TASK-034",
+      "type": "blocks",
+      "reason": "testing after endpoints"
+    },
+    {
+      "task_id": "TASK-037",
+      "depends_on": "TASK-036",
+      "type": "blocks",
+      "reason": "project setup after testing"
+    },
+    {
+      "task_id": "TASK-038",
+      "depends_on": "TASK-037",
+      "type": "blocks",
+      "reason": "responsive design after project"
+    },
+    {
+      "task_id": "TASK-039",
+      "depends_on": "TASK-037",
+      "type": "blocks",
+      "reason": "Docker Compose after project"
+    },
+    {
+      "task_id": "TASK-040",
+      "depends_on": "TASK-039",
+      "type": "blocks",
+      "reason": "testing after Docker"
+    },
+    {
+      "task_id": "TASK-041",
+      "depends_on": "TASK-034",
+      "type": "blocks",
+      "reason": "logging after endpoints"
+    },
+    {
+      "task_id": "TASK-042",
+      "depends_on": "TASK-034",
+      "type": "blocks",
+      "reason": "tests after endpoints"
+    },
+    {
+      "task_id": "TASK-043",
+      "depends_on": "TASK-042",
+      "type": "blocks",
+      "reason": "cases after tests"
+    },
+    {
+      "task_id": "TASK-044",
+      "depends_on": "TASK-034",
+      "type": "blocks",
+      "reason": "Dockerize after endpoints"
+    },
+    {
+      "task_id": "TASK-045",
+      "depends_on": "TASK-035",
+      "type": "blocks",
+      "reason": "testing after integration"
+    },
+    {
+      "task_id": "TASK-046",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "flow design after roles"
+    },
+    {
+      "task_id": "TASK-047",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "patient UI after roles"
+    },
+    {
+      "task_id": "TASK-048",
+      "depends_on": "TASK-006",
+      "type": "blocks",
+      "reason": "doctor UI after roles"
+    }
+  ],
+  "priorities": [
+    {
+      "task_id": "TASK-001",
+      "priority": "critical",
+      "rank": 1
+    },
+    {
+      "task_id": "TASK-002",
+      "priority": "high",
+      "rank": 2
+    },
+    {
+      "task_id": "TASK-033",
+      "priority": "high",
+      "rank": 3
+    },
+    {
+      "task_id": "TASK-003",
+      "priority": "high",
+      "rank": 4
+    },
+    {
+      "task_id": "TASK-004",
+      "priority": "high",
+      "rank": 5
+    },
+    {
+      "task_id": "TASK-005",
+      "priority": "high",
+      "rank": 6
+    },
+    {
+      "task_id": "TASK-006",
+      "priority": "high",
+      "rank": 7
+    },
+    {
+      "task_id": "TASK-032",
+      "priority": "high",
+      "rank": 8
+    },
+    {
+      "task_id": "TASK-008",
+      "priority": "high",
+      "rank": 9
+    },
+    {
+      "task_id": "TASK-016",
+      "priority": "high",
+      "rank": 10
+    },
+    {
+      "task_id": "TASK-018",
+      "priority": "high",
+      "rank": 11
+    },
+    {
+      "task_id": "TASK-021",
+      "priority": "high",
+      "rank": 12
+    },
+    {
+      "task_id": "TASK-046",
+      "priority": "high",
+      "rank": 13
+    },
+    {
+      "task_id": "TASK-047",
+      "priority": "high",
+      "rank": 14
+    },
+    {
+      "task_id": "TASK-048",
+      "priority": "high",
+      "rank": 15
+    },
+    {
+      "task_id": "TASK-034",
+      "priority": "high",
+      "rank": 16
+    },
+    {
+      "task_id": "TASK-009",
+      "priority": "high",
+      "rank": 17
+    },
+    {
+      "task_id": "TASK-017",
+      "priority": "high",
+      "rank": 18
+    },
+    {
+      "task_id": "TASK-019",
+      "priority": "high",
+      "rank": 19
+    },
+    {
+      "task_id": "TASK-022",
+      "priority": "high",
+      "rank": 20
+    },
+    {
+      "task_id": "TASK-027",
+      "priority": "high",
+      "rank": 21
+    },
+    {
+      "task_id": "TASK-035",
+      "priority": "high",
+      "rank": 22
+    },
+    {
+      "task_id": "TASK-036",
+      "priority": "high",
+      "rank": 23
+    },
+    {
+      "task_id": "TASK-042",
+      "priority": "high",
+      "rank": 24
+    },
+    {
+      "task_id": "TASK-044",
+      "priority": "high",
+      "rank": 25
+    },
+    {
+      "task_id": "TASK-010",
+      "priority": "high",
+      "rank": 26
+    },
+    {
+      "task_id": "TASK-012",
+      "priority": "high",
+      "rank": 27
+    },
+    {
+      "task_id": "TASK-025",
+      "priority": "high",
+      "rank": 28
+    },
+    {
+      "task_id": "TASK-028",
+      "priority": "high",
+      "rank": 29
+    },
+    {
+      "task_id": "TASK-045",
+      "priority": "high",
+      "rank": 30
+    },
+    {
+      "task_id": "TASK-037",
+      "priority": "high",
+      "rank": 31
+    },
+    {
+      "task_id": "TASK-039",
+      "priority": "high",
+      "rank": 32
+    },
+    {
+      "task_id": "TASK-007",
+      "priority": "medium",
+      "rank": 33
+    },
+    {
+      "task_id": "TASK-011",
+      "priority": "medium",
+      "rank": 34
+    },
+    {
+      "task_id": "TASK-041",
+      "priority": "medium",
+      "rank": 35
+    },
+    {
+      "task_id": "TASK-014",
+      "priority": "medium",
+      "rank": 36
+    },
+    {
+      "task_id": "TASK-020",
+      "priority": "medium",
+      "rank": 37
+    },
+    {
+      "task_id": "TASK-023",
+      "priority": "medium",
+      "rank": 38
+    },
+    {
+      "task_id": "TASK-024",
+      "priority": "medium",
+      "rank": 39
+    },
+    {
+      "task_id": "TASK-026",
+      "priority": "medium",
+      "rank": 40
+    },
+    {
+      "task_id": "TASK-043",
+      "priority": "medium",
+      "rank": 41
+    },
+    {
+      "task_id": "TASK-013",
+      "priority": "medium",
+      "rank": 42
+    },
+    {
+      "task_id": "TASK-015",
+      "priority": "medium",
+      "rank": 43
+    },
+    {
+      "task_id": "TASK-029",
+      "priority": "medium",
+      "rank": 44
+    },
+    {
+      "task_id": "TASK-030",
+      "priority": "medium",
+      "rank": 45
+    },
+    {
+      "task_id": "TASK-031",
+      "priority": "medium",
+      "rank": 46
+    },
+    {
+      "task_id": "TASK-038",
+      "priority": "medium",
+      "rank": 47
+    },
+    {
+      "task_id": "TASK-040",
+      "priority": "medium",
+      "rank": 48
+    }
+  ],
+  "sprints": [
+    {
+      "id": "SPRINT-001",
+      "number": 1,
+      "goal": "Implement foundations",
+      "task_ids": [
+        "TASK-001",
+        "TASK-002",
+        "TASK-003",
+        "TASK-004",
+        "TASK-005",
+        "TASK-006",
+        "TASK-032",
+        "TASK-033",
+        "TASK-046"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 54.0
+    },
+    {
+      "id": "SPRINT-002",
+      "number": 2,
+      "goal": "Develop core features",
+      "task_ids": [
+        "TASK-008",
+        "TASK-009",
+        "TASK-011",
+        "TASK-016",
+        "TASK-017",
+        "TASK-018",
+        "TASK-019",
+        "TASK-021",
+        "TASK-022",
+        "TASK-034",
+        "TASK-036",
+        "TASK-047",
+        "TASK-048"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 88.0
+    },
+    {
+      "id": "SPRINT-003",
+      "number": 3,
+      "goal": "Add status handling and UI",
+      "task_ids": [
+        "TASK-007",
+        "TASK-010",
+        "TASK-012",
+        "TASK-013",
+        "TASK-014",
+        "TASK-020",
+        "TASK-023",
+        "TASK-024",
+        "TASK-025",
+        "TASK-026",
+        "TASK-027",
+        "TASK-028",
+        "TASK-035",
+        "TASK-037",
+        "TASK-039",
+        "TASK-040"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 90.0
+    },
+    {
+      "id": "SPRINT-004",
+      "number": 4,
+      "goal": "QA and deployment",
+      "task_ids": [
+        "TASK-015",
+        "TASK-029",
+        "TASK-030",
+        "TASK-031",
+        "TASK-038",
+        "TASK-041",
+        "TASK-042",
+        "TASK-043",
+        "TASK-044",
+        "TASK-045"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 86.0
+    }
+  ],
+  "assignments": [
+    {
+      "task_id": "TASK-001",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-002",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-033",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-003",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-004",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-005",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-006",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-032",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-046",
+      "member_id": "TEAM-006",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-008",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-016",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-018",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-021",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-009",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-017",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-019",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-011",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-034",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-022",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-036",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-047",
+      "member_id": "TEAM-006",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-048",
+      "member_id": "TEAM-006",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-027",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-035",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-010",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-012",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-025",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-028",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-037",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-014",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-023",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-024",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-026",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-013",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-007",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-039",
+      "member_id": "TEAM-008",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-020",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-040",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-042",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-045",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-029",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-030",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-038",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-041",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-015",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-044",
+      "member_id": "TEAM-008",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-031",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-043",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    }
+  ],
+  "risks": [
+    {
+      "id": "RISK-001",
+      "title": "Authentication delays",
+      "description": "Delays in authentication design impact all features",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Prioritize auth design",
+      "epic_ids": [
+        "EPIC-001"
+      ]
+    },
+    {
+      "id": "RISK-002",
+      "title": "Booking conflict bugs",
+      "description": "Complex logic may introduce bugs",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Thorough testing",
+      "epic_ids": [
+        "EPIC-004"
+      ]
+    },
+    {
+      "id": "RISK-003",
+      "title": "Schema changes",
+      "description": "Post-week 2 schema changes invalidate work",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Lock schema early",
+      "epic_ids": [
+        "EPIC-006"
+      ]
+    },
+    {
+      "id": "RISK-004",
+      "title": "Integration delays",
+      "description": "API contract agreement may delay integration",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Early API contract",
+      "epic_ids": [
+        "EPIC-004",
+        "EPIC-006"
+      ]
+    },
+    {
+      "id": "RISK-005",
+      "title": "QA bottleneck",
+      "description": "Single QA engineer in last two weeks",
+      "likelihood": "high",
+      "impact": "medium",
+      "mitigation": "Parallel QA tasks",
+      "epic_ids": [
+        "EPIC-007"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "MS-001",
+      "name": "M1",
+      "sprint_id": "SPRINT-001",
+      "week": 1,
+      "criteria": "Implement foundations"
+    },
+    {
+      "id": "MS-002",
+      "name": "M2",
+      "sprint_id": "SPRINT-002",
+      "week": 2,
+      "criteria": "Develop core features"
+    },
+    {
+      "id": "MS-003",
+      "name": "M3",
+      "sprint_id": "SPRINT-003",
+      "week": 3,
+      "criteria": "Add status handling and UI"
+    },
+    {
+      "id": "MS-004",
+      "name": "M4",
+      "sprint_id": "SPRINT-004",
+      "week": 4,
+      "criteria": "QA and deployment"
+    }
+  ],
+  "validation": {
+    "stage": "final",
+    "passed": true,
+    "error_count": 0,
+    "warning_count": 4,
+    "issues": [
+      {
+        "code": "REQUIREMENT_UNCOVERED",
+        "severity": "warning",
+        "message": "functional requirement 'Doctor schedule view' is not linked to any epic",
+        "entity_id": "REQ-018"
+      },
+      {
+        "code": "REQUIREMENT_UNCOVERED",
+        "severity": "warning",
+        "message": "functional requirement 'Dashboard' is not linked to any epic",
+        "entity_id": "REQ-019"
+      },
+      {
+        "code": "REQUIREMENT_UNCOVERED",
+        "severity": "warning",
+        "message": "functional requirement 'Basic reporting' is not linked to any epic",
+        "entity_id": "REQ-020"
+      },
+      {
+        "code": "REQUIREMENT_UNCOVERED",
+        "severity": "warning",
+        "message": "functional requirement 'Staff management' is not linked to any epic",
+        "entity_id": "REQ-021"
+      }
+    ],
+    "checked_revision": 21,
+    "semantic_verdict": "concerns",
+    "semantic_notes": [
+      "Sprint 1 tasks are well-defined but the goal 'Implement foundations' is too broad and may not cover all necessary aspects.",
+      "Sprint 3 tasks include 'Set up React project (+2 more)', which seems out of place as it was not mentioned in previous sprints and might be better suited for a separate sprint.",
+      "Sprint 4 tasks are mostly testing and setup, which might be better spread across multiple sprints to ensure quality and maintainability."
+    ]
+  },
+  "team": [
+    {
+      "id": "TEAM-001",
+      "name": "Project Manager",
+      "role": "project_manager",
+      "skills": [
+        "planning",
+        "documentation",
+        "coordination"
+      ],
+      "capacity_hours_per_sprint": 10.0
+    },
+    {
+      "id": "TEAM-002",
+      "name": "Backend Developer 1",
+      "role": "backend_developer",
+      "skills": [
+        "python",
+        "rest api",
+        "authentication",
+        "postgresql"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-003",
+      "name": "Backend Developer 2",
+      "role": "backend_developer",
+      "skills": [
+        "python",
+        "rest api",
+        "search",
+        "reporting",
+        "postgresql"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-004",
+      "name": "Frontend Developer 1",
+      "role": "frontend_developer",
+      "skills": [
+        "react",
+        "forms",
+        "authentication ui",
+        "tickets ui"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-005",
+      "name": "Frontend Developer 2",
+      "role": "frontend_developer",
+      "skills": [
+        "react",
+        "dashboard",
+        "charts",
+        "responsive layout"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-006",
+      "name": "UI/UX Designer",
+      "role": "ui_ux_designer",
+      "skills": [
+        "wireframes",
+        "design system",
+        "usability"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-007",
+      "name": "QA Engineer",
+      "role": "qa_engineer",
+      "skills": [
+        "test plans",
+        "api testing",
+        "e2e testing",
+        "regression"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-008",
+      "name": "DevOps Engineer",
+      "role": "devops_engineer",
+      "skills": [
+        "docker",
+        "ci/cd",
+        "deployment",
+        "logging"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    }
+  ],
+  "workload": {
+    "TEAM-001": {
+      "name": "Project Manager",
+      "role": "project_manager",
+      "capacity_hours_per_sprint": 10.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 0.0,
+        "SPRINT-003": 0.0,
+        "SPRINT-004": 0.0
+      },
+      "total_hours": 0.0
+    },
+    "TEAM-002": {
+      "name": "Backend Developer 1",
+      "role": "backend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 20.0,
+        "SPRINT-002": 28.0,
+        "SPRINT-003": 24.0,
+        "SPRINT-004": 14.0
+      },
+      "total_hours": 86.0
+    },
+    "TEAM-003": {
+      "name": "Backend Developer 2",
+      "role": "backend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 26.0,
+        "SPRINT-002": 22.0,
+        "SPRINT-003": 24.0,
+        "SPRINT-004": 16.0
+      },
+      "total_hours": 88.0
+    },
+    "TEAM-004": {
+      "name": "Frontend Developer 1",
+      "role": "frontend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 10.0,
+        "SPRINT-003": 8.0,
+        "SPRINT-004": 8.0
+      },
+      "total_hours": 26.0
+    },
+    "TEAM-005": {
+      "name": "Frontend Developer 2",
+      "role": "frontend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 10.0,
+        "SPRINT-003": 12.0,
+        "SPRINT-004": 24.0
+      },
+      "total_hours": 46.0
+    },
+    "TEAM-006": {
+      "name": "UI/UX Designer",
+      "role": "ui_ux_designer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 8.0,
+        "SPRINT-002": 10.0,
+        "SPRINT-003": 0.0,
+        "SPRINT-004": 0.0
+      },
+      "total_hours": 18.0
+    },
+    "TEAM-007": {
+      "name": "QA Engineer",
+      "role": "qa_engineer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 8.0,
+        "SPRINT-003": 16.0,
+        "SPRINT-004": 18.0
+      },
+      "total_hours": 42.0
+    },
+    "TEAM-008": {
+      "name": "DevOps Engineer",
+      "role": "devops_engineer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 0.0,
+        "SPRINT-003": 6.0,
+        "SPRINT-004": 6.0
+      },
+      "total_hours": 12.0
+    }
+  }
+}

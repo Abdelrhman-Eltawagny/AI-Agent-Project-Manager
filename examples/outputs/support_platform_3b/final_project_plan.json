@@ -1,0 +1,1245 @@
+{
+  "project": {
+    "name": "Customer Support & Service Management Platform",
+    "summary": "The project aims to create a web application for managing customer support operations, replacing shared spreadsheets and email threads, with key features like customer and ticket management, role-based access control, and basic reporting.",
+    "objective": "Provide a central place for customer records and support history, make ticket ownership visible, reduce lost or duplicated requests, and deliver a secure, deployable MVP within four weeks.",
+    "duration_weeks": 4,
+    "sprint_count": 4,
+    "sprint_length_weeks": 1,
+    "actors": [
+      "Support Agent",
+      "Support Lead",
+      "Administrator"
+    ],
+    "mvp_scope": [
+      "authentication and user roles",
+      "customer management",
+      "ticket management (create, assign, status, priority, comments)",
+      "searching and filtering tickets",
+      "basic dashboard",
+      "basic reporting",
+      "management of support agent accounts",
+      "REST API",
+      "responsive web interface",
+      "PostgreSQL storage"
+    ],
+    "out_of_scope": [
+      "advanced AI features",
+      "native mobile application",
+      "complex analytics or custom report builders",
+      "third-party CRM integrations",
+      "email-to-ticket automation and customer self-service portal"
+    ],
+    "assumptions": [
+      "the MVP must be usable by support agents by the end of week 4"
+    ],
+    "constraints": [],
+    "business_priority": "the MVP must be usable by support agents by the end of week 4",
+    "status": "complete"
+  },
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "kind": "functional",
+      "title": "Authentication",
+      "description": "users sign in with email and password; sessions expire; failed logins are limited.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-002",
+      "kind": "functional",
+      "title": "User roles",
+      "description": "roles agent, lead and admin control what a user may do.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-003",
+      "kind": "functional",
+      "title": "Customer management",
+      "description": "agents create, edit and deactivate customer records (name, email, phone, company).",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-004",
+      "kind": "functional",
+      "title": "Customer profile",
+      "description": "a profile page shows customer data and the full history of the customer's tickets.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-005",
+      "kind": "functional",
+      "title": "Ticket creation",
+      "description": "agents create a ticket for a customer with title, description, category and priority.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-006",
+      "kind": "functional",
+      "title": "Ticket assignment",
+      "description": "leads and agents assign or reassign a ticket to a support agent.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-007",
+      "kind": "functional",
+      "title": "Ticket status",
+      "description": "tickets move through open, in progress, waiting for customer, resolved and closed.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-008",
+      "kind": "functional",
+      "title": "Ticket priority",
+      "description": "each ticket has a priority (low, medium, high, urgent) that can be changed.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-009",
+      "kind": "functional",
+      "title": "Comments",
+      "description": "agents add internal comments to a ticket; comments show author and time.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-010",
+      "kind": "functional",
+      "title": "Search",
+      "description": "agents search tickets and customers by keyword, ticket number or customer name.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-011",
+      "kind": "functional",
+      "title": "Filtering",
+      "description": "the ticket list can be filtered by status, priority, assignee and creation date.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-012",
+      "kind": "functional",
+      "title": "Dashboard",
+      "description": "a dashboard shows open tickets, tickets by status, tickets by priority and tickets per agent.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-013",
+      "kind": "functional",
+      "title": "Basic reporting",
+      "description": "leads export the filtered ticket list as CSV.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-014",
+      "kind": "functional",
+      "title": "Agent management",
+      "description": "leads and admins create, deactivate and edit support agent accounts.",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-015",
+      "kind": "non_functional",
+      "title": "Secure authentication",
+      "description": "passwords hashed with a modern algorithm, tokens with expiry",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-016",
+      "kind": "non_functional",
+      "title": "Basic authorization",
+      "description": "every API endpoint checks the caller's role",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-017",
+      "kind": "non_functional",
+      "title": "REST API",
+      "description": "all functionality is exposed through a documented REST API returning JSON",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-018",
+      "kind": "non_functional",
+      "title": "Responsive web interface",
+      "description": "usable on desktop and tablet screen sizes",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-019",
+      "kind": "non_functional",
+      "title": "PostgreSQL database",
+      "description": "versioned schema migrations",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-020",
+      "kind": "non_functional",
+      "title": "Logging",
+      "description": "structured application logs for requests and errors",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-021",
+      "kind": "non_functional",
+      "title": "Basic error handling",
+      "description": "consistent error responses and friendly messages in the UI",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-022",
+      "kind": "non_functional",
+      "title": "Automated tests",
+      "description": "unit and API tests for core flows, plus a small end-to-end smoke suite",
+      "priority": "high"
+    },
+    {
+      "id": "REQ-023",
+      "kind": "non_functional",
+      "title": "Dockerized deployment",
+      "description": "the whole stack starts with Docker Compose",
+      "priority": "high"
+    }
+  ],
+  "epics": [
+    {
+      "id": "EPIC-001",
+      "name": "Foundation Setup",
+      "description": "Setup and database configuration",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-019",
+        "REQ-020",
+        "REQ-021",
+        "REQ-022",
+        "REQ-023"
+      ]
+    },
+    {
+      "id": "EPIC-002",
+      "name": "Authentication",
+      "description": "User authentication and authorization",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-001",
+        "REQ-002"
+      ]
+    },
+    {
+      "id": "EPIC-003",
+      "name": "Customer Management",
+      "description": "Customer and ticket management",
+      "priority": "high",
+      "requirement_ids": [
+        "REQ-003",
+        "REQ-004",
+        "REQ-005",
+        "REQ-006",
+        "REQ-007",
+        "REQ-008",
+        "REQ-009",
+        "REQ-010",
+        "REQ-011",
+        "REQ-012",
+        "REQ-013",
+        "REQ-014"
+      ]
+    },
+    {
+      "id": "EPIC-004",
+      "name": "Basic Reporting",
+      "description": "Basic reporting functionality",
+      "priority": "medium",
+      "requirement_ids": [
+        "REQ-015"
+      ]
+    },
+    {
+      "id": "EPIC-005",
+      "name": "Non-functional Requirements",
+      "description": "Security and deployment",
+      "priority": "low",
+      "requirement_ids": [
+        "REQ-016",
+        "REQ-017",
+        "REQ-018",
+        "REQ-019",
+        "REQ-020",
+        "REQ-021",
+        "REQ-022",
+        "REQ-023"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "epic_id": "EPIC-001",
+      "title": "Implement PostgreSQL Database Integration",
+      "type": "backend",
+      "description": "Set up PostgreSQL database for application",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-002",
+      "epic_id": "EPIC-001",
+      "title": "Design Logging System",
+      "type": "backend",
+      "description": "Design and implement logging mechanism",
+      "estimated_hours": 4.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-003",
+      "epic_id": "EPIC-001",
+      "title": "Implement Basic Error Handling",
+      "type": "backend",
+      "description": "Add basic error handling for API endpoints",
+      "estimated_hours": 4.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-004",
+      "epic_id": "EPIC-001",
+      "title": "Create Automated Test Cases",
+      "type": "backend",
+      "description": "Develop and execute automated test cases",
+      "estimated_hours": 6.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-005",
+      "epic_id": "EPIC-001",
+      "title": "Dockerize Application Deployment",
+      "type": "devops",
+      "description": "Containerize application for deployment",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-006",
+      "epic_id": "EPIC-002",
+      "title": "Implement User Authentication API Endpoints",
+      "type": "backend",
+      "description": "Create endpoints for user registration and login",
+      "estimated_hours": 6.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-007",
+      "epic_id": "EPIC-002",
+      "title": "Implement Role-Based Access Control",
+      "type": "backend",
+      "description": "Add logic for user roles and permissions",
+      "estimated_hours": 6.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-008",
+      "epic_id": "EPIC-002",
+      "title": "Implement User Role Management",
+      "type": "backend",
+      "description": "Create endpoints for managing user roles",
+      "estimated_hours": 4.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-009",
+      "epic_id": "EPIC-002",
+      "title": "Implement User Authentication Testing",
+      "type": "qa",
+      "description": "Write tests for user authentication endpoints",
+      "estimated_hours": 4.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-010",
+      "epic_id": "EPIC-003",
+      "title": "Implement Customer Profile CRUD Operations",
+      "type": "backend",
+      "description": "Create, read, update, delete operations for customer profiles",
+      "estimated_hours": 8.0,
+      "priority": "critical",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-011",
+      "epic_id": "EPIC-003",
+      "title": "Create Ticket Creation Form and Backend API",
+      "type": "backend",
+      "description": "Design and implement form for creating new tickets and API",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-012",
+      "epic_id": "EPIC-003",
+      "title": "Implement Ticket Assignment Logic",
+      "type": "backend",
+      "description": "Logic to assign tickets to agents based on priority",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-013",
+      "epic_id": "EPIC-003",
+      "title": "Design and Implement Basic Reporting API",
+      "type": "backend",
+      "description": "API to generate basic reports on customer and ticket data",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-014",
+      "epic_id": "EPIC-003",
+      "title": "Create Frontend Ticket Creation Form",
+      "type": "frontend",
+      "description": "Design and implement form for creating new tickets",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-015",
+      "epic_id": "EPIC-003",
+      "title": "Design and Implement Customer Profile Page",
+      "type": "frontend",
+      "description": "Design and implement page for viewing and editing customer profiles",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-016",
+      "epic_id": "EPIC-003",
+      "title": "Implement Basic Filtering and Searching on Tickets",
+      "type": "frontend",
+      "description": "Add basic filtering and searching functionality on ticket list",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-017",
+      "epic_id": "EPIC-003",
+      "title": "Design and Implement Dashboard for Agents",
+      "type": "frontend",
+      "description": "Design and implement dashboard for agents to view their tickets",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-018",
+      "epic_id": "EPIC-004",
+      "title": "Implement Backend Authentication",
+      "type": "backend",
+      "description": "Secure user authentication system",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-019",
+      "epic_id": "EPIC-004",
+      "title": "Design and Implement Frontend User Interface",
+      "type": "frontend",
+      "description": "Create user-friendly login and dashboard",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-020",
+      "epic_id": "EPIC-005",
+      "title": "Implement Basic Authorization Backend",
+      "type": "backend",
+      "description": "Implement basic authorization for the REST API",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-021",
+      "epic_id": "EPIC-005",
+      "title": "Implement REST API Backend",
+      "type": "backend",
+      "description": "Implement REST API endpoints for the application",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-022",
+      "epic_id": "EPIC-005",
+      "title": "Implement Logging and Error Handling Backend",
+      "type": "backend",
+      "description": "Implement logging and error handling for the application",
+      "estimated_hours": 6.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-023",
+      "epic_id": "EPIC-001",
+      "title": "Design Foundation Architecture",
+      "type": "design",
+      "description": "Design the overall architecture of the system to ensure scalability and maintainability.",
+      "estimated_hours": 6.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-024",
+      "epic_id": "EPIC-002",
+      "title": "Backend API Design",
+      "type": "backend",
+      "description": "Design and document the backend API endpoints and their interactions.",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-025",
+      "epic_id": "EPIC-003",
+      "title": "Customer Management Database Schema",
+      "type": "database",
+      "description": "Design the database schema for storing customer information.",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-026",
+      "epic_id": "EPIC-004",
+      "title": "Frontend User Interface Design",
+      "type": "frontend",
+      "description": "Design the user interface for the frontend application.",
+      "estimated_hours": 8.0,
+      "priority": "low",
+      "status": "planned"
+    },
+    {
+      "id": "TASK-027",
+      "epic_id": "EPIC-005",
+      "title": "Non-functional Requirements Documentation",
+      "type": "documentation",
+      "description": "Document the non-functional requirements for the system.",
+      "estimated_hours": 4.0,
+      "priority": "high",
+      "status": "planned"
+    }
+  ],
+  "dependencies": [
+    {
+      "task_id": "TASK-005",
+      "depends_on": "TASK-002",
+      "type": "blocks",
+      "reason": "Design Dockerization before deployment"
+    }
+  ],
+  "priorities": [
+    {
+      "task_id": "TASK-003",
+      "priority": "critical",
+      "rank": 1
+    },
+    {
+      "task_id": "TASK-004",
+      "priority": "critical",
+      "rank": 2
+    },
+    {
+      "task_id": "TASK-006",
+      "priority": "critical",
+      "rank": 3
+    },
+    {
+      "task_id": "TASK-007",
+      "priority": "critical",
+      "rank": 4
+    },
+    {
+      "task_id": "TASK-008",
+      "priority": "critical",
+      "rank": 5
+    },
+    {
+      "task_id": "TASK-010",
+      "priority": "critical",
+      "rank": 6
+    },
+    {
+      "task_id": "TASK-001",
+      "priority": "high",
+      "rank": 7
+    },
+    {
+      "task_id": "TASK-022",
+      "priority": "high",
+      "rank": 8
+    },
+    {
+      "task_id": "TASK-025",
+      "priority": "high",
+      "rank": 9
+    },
+    {
+      "task_id": "TASK-027",
+      "priority": "high",
+      "rank": 10
+    },
+    {
+      "task_id": "TASK-002",
+      "priority": "low",
+      "rank": 11
+    },
+    {
+      "task_id": "TASK-009",
+      "priority": "low",
+      "rank": 12
+    },
+    {
+      "task_id": "TASK-011",
+      "priority": "low",
+      "rank": 13
+    },
+    {
+      "task_id": "TASK-012",
+      "priority": "low",
+      "rank": 14
+    },
+    {
+      "task_id": "TASK-013",
+      "priority": "low",
+      "rank": 15
+    },
+    {
+      "task_id": "TASK-014",
+      "priority": "low",
+      "rank": 16
+    },
+    {
+      "task_id": "TASK-015",
+      "priority": "low",
+      "rank": 17
+    },
+    {
+      "task_id": "TASK-016",
+      "priority": "low",
+      "rank": 18
+    },
+    {
+      "task_id": "TASK-017",
+      "priority": "low",
+      "rank": 19
+    },
+    {
+      "task_id": "TASK-018",
+      "priority": "low",
+      "rank": 20
+    },
+    {
+      "task_id": "TASK-019",
+      "priority": "low",
+      "rank": 21
+    },
+    {
+      "task_id": "TASK-020",
+      "priority": "low",
+      "rank": 22
+    },
+    {
+      "task_id": "TASK-021",
+      "priority": "low",
+      "rank": 23
+    },
+    {
+      "task_id": "TASK-023",
+      "priority": "low",
+      "rank": 24
+    },
+    {
+      "task_id": "TASK-024",
+      "priority": "low",
+      "rank": 25
+    },
+    {
+      "task_id": "TASK-026",
+      "priority": "low",
+      "rank": 26
+    },
+    {
+      "task_id": "TASK-005",
+      "priority": "low",
+      "rank": 27
+    }
+  ],
+  "sprints": [
+    {
+      "id": "SPRINT-001",
+      "number": 1,
+      "goal": "Set up repository and CI",
+      "task_ids": [
+        "TASK-001",
+        "TASK-003",
+        "TASK-004",
+        "TASK-006",
+        "TASK-007",
+        "TASK-008",
+        "TASK-010",
+        "TASK-022"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 46.0
+    },
+    {
+      "id": "SPRINT-002",
+      "number": 2,
+      "goal": "Customer and ticket core",
+      "task_ids": [
+        "TASK-002",
+        "TASK-009",
+        "TASK-011",
+        "TASK-012",
+        "TASK-013",
+        "TASK-014",
+        "TASK-025",
+        "TASK-027"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 42.0
+    },
+    {
+      "id": "SPRINT-003",
+      "number": 3,
+      "goal": "Comments, search, filtering, dashboard",
+      "task_ids": [
+        "TASK-015",
+        "TASK-016",
+        "TASK-017",
+        "TASK-018",
+        "TASK-019",
+        "TASK-020"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 42.0
+    },
+    {
+      "id": "SPRINT-004",
+      "number": 4,
+      "goal": "QA, bug fixing, deployment hardening, documentation",
+      "task_ids": [
+        "TASK-005",
+        "TASK-021",
+        "TASK-023",
+        "TASK-024",
+        "TASK-026"
+      ],
+      "capacity_hours": 220.0,
+      "planned_hours": 36.0
+    }
+  ],
+  "assignments": [
+    {
+      "task_id": "TASK-003",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-010",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-004",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-006",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-007",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-001",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-022",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-008",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-001",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-012",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-013",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-014",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-002",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-011",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-025",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-027",
+      "member_id": "TEAM-001",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-002",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-009",
+      "member_id": "TEAM-007",
+      "sprint_id": "SPRINT-002",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-018",
+      "member_id": "TEAM-002",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-020",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-003",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-015",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-017",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-019",
+      "member_id": "TEAM-004",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-016",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-003",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-021",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-024",
+      "member_id": "TEAM-003",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-026",
+      "member_id": "TEAM-005",
+      "sprint_id": "SPRINT-004",
+      "reason": "agent choice (role + skills + capacity)"
+    },
+    {
+      "task_id": "TASK-005",
+      "member_id": "TEAM-008",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    },
+    {
+      "task_id": "TASK-023",
+      "member_id": "TEAM-006",
+      "sprint_id": "SPRINT-004",
+      "reason": "auto: least-loaded eligible member"
+    }
+  ],
+  "risks": [
+    {
+      "id": "RISK-001",
+      "title": "Authentication delays",
+      "description": "Authentication blocks all other features.",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Implement multi-factor authentication and regular security audits.",
+      "epic_ids": [
+        "EPIC-001",
+        "EPIC-002",
+        "EPIC-003",
+        "EPIC-004"
+      ]
+    },
+    {
+      "id": "RISK-002",
+      "title": "Database schema changes after week 2",
+      "description": "Could invalidate API and UI work.",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Schedule database changes during a maintenance window.",
+      "epic_ids": [
+        "EPIC-001",
+        "EPIC-002",
+        "EPIC-003",
+        "EPIC-004"
+      ]
+    },
+    {
+      "id": "RISK-003",
+      "title": "Frontend/backend integration delays",
+      "description": "If API contracts are not agreed early.",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Agree API contracts early and conduct thorough testing.",
+      "epic_ids": [
+        "EPIC-001",
+        "EPIC-002",
+        "EPIC-003",
+        "EPIC-004"
+      ]
+    },
+    {
+      "id": "RISK-004",
+      "title": "QA bottleneck",
+      "description": "A single QA engineer must test everything in the last two weeks.",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Increase QA team size or extend testing phases.",
+      "epic_ids": [
+        "EPIC-001",
+        "EPIC-002",
+        "EPIC-003",
+        "EPIC-004"
+      ]
+    },
+    {
+      "id": "RISK-005",
+      "title": "Deployment issues",
+      "description": "Discovered late because production-like environments are not used early.",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Use production-like environments early and conduct thorough testing.",
+      "epic_ids": [
+        "EPIC-001",
+        "EPIC-002",
+        "EPIC-003",
+        "EPIC-004"
+      ]
+    },
+    {
+      "id": "RISK-006",
+      "title": "Scope creep",
+      "description": "Stakeholders asking for extra features during the month.",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Set clear scope and communicate it to stakeholders.",
+      "epic_ids": [
+        "EPIC-001",
+        "EPIC-002",
+        "EPIC-003",
+        "EPIC-004"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "MS-001",
+      "name": "M1 end of week 1: authentication working end to end, database schema approved, dev environment running.",
+      "sprint_id": "SPRINT-001",
+      "week": 1,
+      "criteria": "Set up repository and CI"
+    },
+    {
+      "id": "MS-002",
+      "name": "M2 end of week 2: agents can create customers and tickets and change ticket status.",
+      "sprint_id": "SPRINT-002",
+      "week": 2,
+      "criteria": "Customer and ticket core"
+    },
+    {
+      "id": "MS-003",
+      "name": "M3 end of week 3: search, filtering and dashboard integrated; regression tests running.",
+      "sprint_id": "SPRINT-003",
+      "week": 3,
+      "criteria": "Comments, search, filtering, dashboard"
+    },
+    {
+      "id": "MS-004",
+      "name": "M4 end of week 4: MVP deployed with Docker and accepted by the support team.",
+      "sprint_id": "SPRINT-004",
+      "week": 4,
+      "criteria": "QA, bug fixing, deployment hardening, documentation"
+    }
+  ],
+  "validation": {
+    "stage": "final",
+    "passed": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "issues": [],
+    "checked_revision": 19,
+    "semantic_verdict": "concerns",
+    "semantic_notes": [
+      "Sprint 1 goal does not align with the project scope",
+      "Sprint 2 goal is overly broad and lacks specific tasks",
+      "Sprint 3 goal is not aligned with the project scope",
+      "Sprint 4 goal is not aligned with the project scope"
+    ]
+  },
+  "team": [
+    {
+      "id": "TEAM-001",
+      "name": "Project Manager",
+      "role": "project_manager",
+      "skills": [
+        "planning",
+        "documentation",
+        "coordination"
+      ],
+      "capacity_hours_per_sprint": 10.0
+    },
+    {
+      "id": "TEAM-002",
+      "name": "Backend Developer 1",
+      "role": "backend_developer",
+      "skills": [
+        "python",
+        "rest api",
+        "authentication",
+        "postgresql"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-003",
+      "name": "Backend Developer 2",
+      "role": "backend_developer",
+      "skills": [
+        "python",
+        "rest api",
+        "search",
+        "reporting",
+        "postgresql"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-004",
+      "name": "Frontend Developer 1",
+      "role": "frontend_developer",
+      "skills": [
+        "react",
+        "forms",
+        "authentication ui",
+        "tickets ui"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-005",
+      "name": "Frontend Developer 2",
+      "role": "frontend_developer",
+      "skills": [
+        "react",
+        "dashboard",
+        "charts",
+        "responsive layout"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-006",
+      "name": "UI/UX Designer",
+      "role": "ui_ux_designer",
+      "skills": [
+        "wireframes",
+        "design system",
+        "usability"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-007",
+      "name": "QA Engineer",
+      "role": "qa_engineer",
+      "skills": [
+        "test plans",
+        "api testing",
+        "e2e testing",
+        "regression"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    },
+    {
+      "id": "TEAM-008",
+      "name": "DevOps Engineer",
+      "role": "devops_engineer",
+      "skills": [
+        "docker",
+        "ci/cd",
+        "deployment",
+        "logging"
+      ],
+      "capacity_hours_per_sprint": 30.0
+    }
+  ],
+  "workload": {
+    "TEAM-001": {
+      "name": "Project Manager",
+      "role": "project_manager",
+      "capacity_hours_per_sprint": 10.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 4.0,
+        "SPRINT-003": 0.0,
+        "SPRINT-004": 0.0
+      },
+      "total_hours": 4.0
+    },
+    "TEAM-002": {
+      "name": "Backend Developer 1",
+      "role": "backend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 22.0,
+        "SPRINT-002": 16.0,
+        "SPRINT-003": 6.0,
+        "SPRINT-004": 0.0
+      },
+      "total_hours": 44.0
+    },
+    "TEAM-003": {
+      "name": "Backend Developer 2",
+      "role": "backend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 24.0,
+        "SPRINT-002": 12.0,
+        "SPRINT-003": 6.0,
+        "SPRINT-004": 14.0
+      },
+      "total_hours": 56.0
+    },
+    "TEAM-004": {
+      "name": "Frontend Developer 1",
+      "role": "frontend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 0.0,
+        "SPRINT-003": 16.0,
+        "SPRINT-004": 0.0
+      },
+      "total_hours": 16.0
+    },
+    "TEAM-005": {
+      "name": "Frontend Developer 2",
+      "role": "frontend_developer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 6.0,
+        "SPRINT-003": 14.0,
+        "SPRINT-004": 8.0
+      },
+      "total_hours": 28.0
+    },
+    "TEAM-006": {
+      "name": "UI/UX Designer",
+      "role": "ui_ux_designer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 0.0,
+        "SPRINT-003": 0.0,
+        "SPRINT-004": 6.0
+      },
+      "total_hours": 6.0
+    },
+    "TEAM-007": {
+      "name": "QA Engineer",
+      "role": "qa_engineer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 4.0,
+        "SPRINT-003": 0.0,
+        "SPRINT-004": 0.0
+      },
+      "total_hours": 4.0
+    },
+    "TEAM-008": {
+      "name": "DevOps Engineer",
+      "role": "devops_engineer",
+      "capacity_hours_per_sprint": 30.0,
+      "hours_per_sprint": {
+        "SPRINT-001": 0.0,
+        "SPRINT-002": 0.0,
+        "SPRINT-003": 0.0,
+        "SPRINT-004": 8.0
+      },
+      "total_hours": 8.0
+    }
+  }
+}
