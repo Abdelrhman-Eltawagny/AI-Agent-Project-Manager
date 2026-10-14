@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 <img src="docs/assets/social-preview.png" alt="AI Agent Project Manager" width="100%"/>
@@ -376,3 +377,6 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 ## License
 
 Released under the [MIT License](LICENSE).
+=======
+# AI-Agent-Project-Manager
+>>>>>>> a3ab89f4d87ee5c0ab8477558e9487cb704bbffe
